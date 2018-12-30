@@ -17,6 +17,7 @@
     <PackageReference Include="Com.MarcusTS.LifecycleAware" Version="1.0.10" />
     <PackageReference Include="Com.MarcusTS.SharedForms" Version="1.0.8" />
     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="1.0.7" />
+    <PackageReference Include="Com.MarcusTS.SmartDI" Version="1.0.10" />
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
   </ItemGroup>
 
@@ -26,7 +27,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\SmartDI.LifecycleAware\Com.MarcusTS.SmartDI.LifecycleAware.csproj" />
-    <ProjectReference Include="..\..\..\SmartDI\Com.MarcusTS.SmartDI.csproj" />
   </ItemGroup>
 
   <ItemGroup>
