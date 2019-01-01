@@ -4,13 +4,20 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Stephen Marcus</Authors>
     <Company>Marcus Technical Services, Inc.</Company>
-    <Product>Sample App</Product>
+    <Product>Smart DI Container with Lifecycle Sample App</Product>
+    <Version>1.0.2</Version>
+    <PackageTags>ioc ioc-container di di-container object-lifecycle smart-di-container sample-app</PackageTags>
+    <PackageReleaseNotes>Removed direct project dependence</PackageReleaseNotes>
+    <Copyright>Copyright 2018 Marcus Technical Services, Inc. (https://www.marcusts.com)</Copyright>
+    <Description>A sample application demonstrating lifecycle support for a Smart DI Container.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>pdbonly</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>D:\Dev\MtsShared\SmartDI.LifecycleAware.SampleApp\SampleApp\SampleApp\Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,15 +25,12 @@
     <PackageReference Include="Com.MarcusTS.SharedForms" Version="1.0.8" />
     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="1.0.7" />
     <PackageReference Include="Com.MarcusTS.SmartDI" Version="1.0.10" />
+    <PackageReference Include="Com.MarcusTS.SmartDI.LifecycleAware" Version="1.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\SmartDI.LifecycleAware\Com.MarcusTS.SmartDI.LifecycleAware.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,6 +42,12 @@
   <ItemGroup>
     <None Update="App.xaml">
       <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.nuspec">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>

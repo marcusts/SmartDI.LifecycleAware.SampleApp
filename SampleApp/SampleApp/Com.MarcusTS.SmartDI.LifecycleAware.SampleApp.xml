@@ -1,0 +1,397 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Com.MarcusTS.SmartDI.LifecycleAware.SampleApp</name>
+    </assembly>
+    <members>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.App">
+            <summary>
+            Class App.
+            Implements the <see cref="T:Xamarin.Forms.Application" />
+            Implements the <see cref="T:Com.MarcusTS.LifecycleAware.Common.Interfaces.IManagePageChanges" />
+            Implements the <see cref="T:Com.MarcusTS.LifecycleAware.Common.Interfaces.IReportAppLifecycle" />
+            </summary>
+            <seealso cref="T:Xamarin.Forms.Application" />
+            <seealso cref="T:Com.MarcusTS.LifecycleAware.Common.Interfaces.IManagePageChanges" />
+            <seealso cref="T:Com.MarcusTS.LifecycleAware.Common.Interfaces.IReportAppLifecycle" />
+        </member>
+        <member name="F:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.App.GlobalServiceContainer">
+            <summary>
+            The global service container
+            </summary>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.App.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.App" /> class.
+            </summary>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.App.SetMainPage(Xamarin.Forms.Page)">
+            <summary>
+            Sets the main page.
+            </summary>
+            <param name="newPage">The new page.</param>
+        </member>
+        <member name="E:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.App.AppIsGoingToSleep">
+            <summary>
+            Occurs when [application is going to sleep].
+            </summary>
+        </member>
+        <member name="E:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.App.AppIsResuming">
+            <summary>
+            Occurs when [application is resuming].
+            </summary>
+        </member>
+        <member name="E:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.App.AppIsStarting">
+            <summary>
+            Occurs when [application is starting].
+            </summary>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.App.OnResume">
+            <summary>
+            Application developers override this method to perform actions when the application resumes from a sleeping state.
+            </summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.App.OnSleep">
+            <summary>
+            Application developers override this method to perform actions when the application enters the sleeping state.
+            </summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.App.OnStart">
+            <summary>
+            Called when [start].
+            </summary>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceOne">
+            <summary>
+            Interface IGlobalServiceOne
+            </summary>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.GlobalServiceOne">
+            <summary>
+            Class GlobalServiceOne.
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceOne" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceOne" />
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceThree">
+            <summary>
+            Interface IGlobalServiceThree
+            </summary>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.GlobalServiceThree">
+            <summary>
+            Class GlobalServiceThree.
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceThree" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceThree" />
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceTwo">
+            <summary>
+            Interface IGlobalServiceTwo
+            </summary>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.GlobalServiceTwo">
+            <summary>
+            Class GlobalServiceTwo.
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceTwo" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceTwo" />
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase">
+            <summary>
+            Interface ICustomViewModelBase
+            Implements the <see cref="T:Com.MarcusTS.LifecycleAware.ViewModels.IViewModelWithLifecycle" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.LifecycleAware.ViewModels.IViewModelWithLifecycle" />
+        </member>
+        <member name="P:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase.ButtonCommand">
+            <summary>
+            Gets the button command.
+            </summary>
+            <value>The button command.</value>
+        </member>
+        <member name="P:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>The content.</value>
+        </member>
+        <member name="P:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase">
+            <summary>
+            Class CustomViewModelBase.
+            Implements the <see cref="T:Com.MarcusTS.LifecycleAware.ViewModels.ViewModelWithLifecycle" />
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.LifecycleAware.ViewModels.ViewModelWithLifecycle" />
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
+        </member>
+        <member name="P:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase.ButtonCommand">
+            <summary>
+            Gets the button command.
+            </summary>
+            <value>The button command.</value>
+        </member>
+        <member name="P:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>The content.</value>
+        </member>
+        <member name="P:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+            <value>The title.</value>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelFactory">
+            <summary>
+            Interface IViewModelFactory
+            </summary>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelFactory.CreateSharedViewModel``1(System.Object)">
+            <summary>
+            Creates the shared view model.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">The object.</param>
+            <returns>ICustomViewModelBase.</returns>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelFactory.CreateViewModel``1">
+            <summary>
+            Creates the view model.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns>ICustomViewModelBase.</returns>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModelFactory">
+            <summary>
+            Class ViewModelFactory.
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelFactory" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelFactory" />
+        </member>
+        <member name="F:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModelFactory._viewModelContainer">
+            <summary>
+            The view model container
+            </summary>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModelFactory.#ctor(Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceOne,Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceTwo,Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceThree)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModelFactory" /> class.
+            </summary>
+            <param name="service1">The service1.</param>
+            <param name="service2">The service2.</param>
+            <param name="service3">The service3.</param>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModelFactory.CreateSharedViewModel``1(System.Object)">
+            <summary>
+            This case requires an object "parent".
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj">The object.</param>
+            <returns>ICustomViewModelBase.</returns>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModelFactory.CreateViewModel``1">
+            <summary>
+            This method will return the view model based on its registration rules.
+            It is safer than registering as "All Access" and then resolving using more narrow guidance.
+            It also encapsulates the private (static) view model container, insulating it from the rest of the app.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns>ICustomViewModelBase.</returns>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModelUtils">
+            <summary>
+            Class ViewModelUtils.
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModelUtils.ViewModelBuilder">
+            <summary>
+            The view model builder
+            </summary>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_Global">
+            <summary>
+            Interface IViewModel_Global
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModel_Global">
+            <summary>
+            Class ViewModel_Global.
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase" />
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_Global" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase" />
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_Global" />
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModel_Global.#ctor(Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceTwo,Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceThree)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModel_Global" /> class.
+            </summary>
+            <param name="service2">The service2.</param>
+            <param name="service3">The service3.</param>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_Private">
+            <summary>
+            Interface IViewModel_Private
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModel_Private">
+            <summary>
+            Class ViewModel_Private.
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase" />
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_Private" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase" />
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_Private" />
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModel_Private.#ctor(Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceOne,Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceThree)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModel_Private" /> class.
+            </summary>
+            <param name="service1">The service1.</param>
+            <param name="service3">The service3.</param>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_ToBeShared">
+            <summary>
+            Interface IViewModel_ToBeShared
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModel_ToBeShared">
+            <summary>
+            Class ViewModel_ToBeShared.
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase" />
+            Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_ToBeShared" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase" />
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_ToBeShared" />
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModel_ToBeShared.#ctor(Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceTwo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModel_ToBeShared" /> class.
+            </summary>
+            <param name="service2">The service2.</param>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine">
+            <summary>
+            Class StateMachine.
+            </summary>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine" /> class.
+            </summary>
+        </member>
+        <member name="P:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.CurrentPageMode">
+            <summary>
+            The global 1
+            </summary>
+            <value>The current page mode.</value>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.SetMainPage(Xamarin.Forms.ContentPage,Com.MarcusTS.LifecycleAware.ViewModels.IViewModelWithLifecycle)">
+            <summary>
+            Sets the main page.
+            </summary>
+            <param name="page">The page.</param>
+            <param name="viewModel">The view model.</param>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._currentPageMode">
+            <summary>
+            The current page mode
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._endViewModel">
+            <summary>
+            The end view model
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._generalPage1">
+            <summary>
+            The general page1
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._generalPage2">
+            <summary>
+            The general page2
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._globalViewModel1">
+            <summary>
+            The global view model1
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._globalViewModel2">
+            <summary>
+            The global view model2
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._privateViewModel1">
+            <summary>
+            The private view model1
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._privateViewModel2">
+            <summary>
+            The private view model2
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._sharedViewModel1">
+            <summary>
+            The shared view model1
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._sharedViewModel2">
+            <summary>
+            The shared view model2
+            </summary>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.GoToNextMode">
+            <summary>
+            Goes to next mode.
+            </summary>
+        </member>
+        <member name="M:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.ResetCurrentPageMode">
+            <summary>
+            Resets the current page mode.
+            </summary>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Views.GeneralPage">
+            <summary>
+            Class GeneralPage.
+            Implements the <see cref="T:Com.MarcusTS.LifecycleAware.Views.Pages.ContentPageWithLifecycle" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.LifecycleAware.Views.Pages.ContentPageWithLifecycle" />
+        </member>
+        <member name="M:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Views.GeneralPage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Views.GeneralPage" /> class.
+            </summary>
+        </member>
+    </members>
+</doc>
