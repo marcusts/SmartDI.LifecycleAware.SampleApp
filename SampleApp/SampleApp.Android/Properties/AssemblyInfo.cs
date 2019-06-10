@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : SampleApp.Android
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 12-26-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="AssemblyInfo.cs" company="">
-//     Copyright ©  2014
+// <copyright file=AssemblyInfo.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -28,10 +23,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 // *********************************************************************************
-using System.Reflection;
-using System.Runtime.InteropServices;
+
 using Android;
 using Android.App;
+using System.Reflection;
+using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information

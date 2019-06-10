@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI.LifecycleAware.SampleApp
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 12-26-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="GlobalServiceOne.cs" company="Com.MarcusTS.SmartDI.LifecycleAware.SampleApp">
-//     Copyright (c) . All rights reserved.
+// <copyright file=GlobalServiceOne.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -28,19 +23,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 // *********************************************************************************
+
 namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services
 {
    /// <summary>
-   /// Interface IGlobalServiceOne
+   ///    Interface IGlobalServiceOne
    /// </summary>
    public interface IGlobalServiceOne
-   { }
+   {
+   }
 
    /// <summary>
-   /// Class GlobalServiceOne.
-   /// Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceOne" />
+   ///    Class GlobalServiceOne.
+   ///    Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceOne" />
    /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceOne" />
    public class GlobalServiceOne : IGlobalServiceOne
-   { }
+   {
+   }
 }

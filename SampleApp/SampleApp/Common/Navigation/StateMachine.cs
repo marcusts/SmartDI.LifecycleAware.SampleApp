@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI.LifecycleAware.SampleApp
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 12-27-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="StateMachine.cs" company="Com.MarcusTS.SmartDI.LifecycleAware.SampleApp">
-//     Copyright (c) . All rights reserved.
+// <copyright file=StateMachine.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -31,19 +26,17 @@
 
 namespace Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation
 {
+   using Com.MarcusTS.LifecycleAware.ViewModels;
+   using Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels;
+   using Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Views;
    using System;
-   using MarcusTS.LifecycleAware.ViewModels;
-   using SmartDi.LifecycleAware.SampleApp.ViewModels;
-   using Views;
    using Xamarin.Forms;
 
    /// <summary>
-   /// Class StateMachine.
+   ///    Class StateMachine.
    /// </summary>
    public static class StateMachine
    {
-      #region Public Enums
-
       public enum PageModes
       {
          Private_1,
@@ -55,12 +48,65 @@ namespace Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation
          END
       }
 
-      #endregion Public Enums
-
-      #region Public Constructors
+      /// <summary>
+      ///    The end view model
+      /// </summary>
+      private static readonly ICustomViewModelBase _endViewModel =
+         ViewModelUtils.ViewModelBuilder.CreateViewModel<IViewModel_Private>();
 
       /// <summary>
-      /// Initializes static members of the <see cref="StateMachine" /> class.
+      ///    The general page1
+      /// </summary>
+      private static readonly ContentPage _generalPage1 = new GeneralPage();
+
+      /// <summary>
+      ///    The general page2
+      /// </summary>
+      private static readonly ContentPage _generalPage2 = new GeneralPage();
+
+      /// <summary>
+      ///    The global view model1
+      /// </summary>
+      private static readonly ICustomViewModelBase _globalViewModel1 =
+         ViewModelUtils.ViewModelBuilder.CreateViewModel<IViewModel_Global>();
+
+      /// <summary>
+      ///    The global view model2
+      /// </summary>
+      private static readonly ICustomViewModelBase _globalViewModel2 =
+         ViewModelUtils.ViewModelBuilder.CreateViewModel<IViewModel_Global>();
+
+      /// <summary>
+      ///    The private view model1
+      /// </summary>
+      private static readonly ICustomViewModelBase _privateViewModel1 =
+         ViewModelUtils.ViewModelBuilder.CreateViewModel<IViewModel_Private>();
+
+      /// <summary>
+      ///    The private view model2
+      /// </summary>
+      private static readonly ICustomViewModelBase _privateViewModel2 =
+         ViewModelUtils.ViewModelBuilder.CreateViewModel<IViewModel_Private>();
+
+      /// <summary>
+      ///    The shared view model1
+      /// </summary>
+      private static readonly ICustomViewModelBase _sharedViewModel1 =
+         ViewModelUtils.ViewModelBuilder.CreateSharedViewModel<IViewModel_ToBeShared>(_generalPage1);
+
+      /// <summary>
+      ///    The shared view model2
+      /// </summary>
+      private static readonly ICustomViewModelBase _sharedViewModel2 =
+         ViewModelUtils.ViewModelBuilder.CreateSharedViewModel<IViewModel_ToBeShared>(_generalPage2);
+
+      /// <summary>
+      ///    The current page mode
+      /// </summary>
+      private static PageModes _currentPageMode;
+
+      /// <summary>
+      ///    Initializes static members of the <see cref="StateMachine" /> class.
       /// </summary>
       static StateMachine()
       {
@@ -88,8 +134,9 @@ namespace Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation
          _endViewModel.Title       = "END";
          _endViewModel.Description = "To restart, click 'NEXT'";
       }
+
       /// <summary>
-      /// The global 1
+      ///    The global 1
       /// </summary>
       /// <value>The current page mode.</value>
       private static PageModes CurrentPageMode
@@ -140,88 +187,8 @@ namespace Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation
          }
       }
 
-      #endregion Private Properties
-
-      #region Private Methods
-
       /// <summary>
-      /// Sets the main page.
-      /// </summary>
-      /// <param name="page">The page.</param>
-      /// <param name="viewModel">The view model.</param>
-      private static void SetMainPage(ContentPage             page,
-                                      IViewModelWithLifecycle viewModel)
-      {
-         page.BindingContext          = viewModel;
-         Application.Current.MainPage = page;
-      }
-
-      #endregion Private Methods
-
-      #region Private Fields
-
-      /// <summary>
-      /// The current page mode
-      /// </summary>
-      private static PageModes _currentPageMode;
-
-      /// <summary>
-      /// The end view model
-      /// </summary>
-      private static readonly ICustomViewModelBase _endViewModel =
-         ViewModelUtils.ViewModelBuilder.CreateViewModel<IViewModel_Private>();
-
-      /// <summary>
-      /// The general page1
-      /// </summary>
-      private static readonly ContentPage _generalPage1 = new GeneralPage();
-      /// <summary>
-      /// The general page2
-      /// </summary>
-      private static readonly ContentPage _generalPage2 = new GeneralPage();
-
-      /// <summary>
-      /// The global view model1
-      /// </summary>
-      private static readonly ICustomViewModelBase _globalViewModel1 =
-         ViewModelUtils.ViewModelBuilder.CreateViewModel<IViewModel_Global>();
-
-      /// <summary>
-      /// The global view model2
-      /// </summary>
-      private static readonly ICustomViewModelBase _globalViewModel2 =
-         ViewModelUtils.ViewModelBuilder.CreateViewModel<IViewModel_Global>();
-
-      /// <summary>
-      /// The private view model1
-      /// </summary>
-      private static readonly ICustomViewModelBase _privateViewModel1 =
-         ViewModelUtils.ViewModelBuilder.CreateViewModel<IViewModel_Private>();
-
-      /// <summary>
-      /// The private view model2
-      /// </summary>
-      private static readonly ICustomViewModelBase _privateViewModel2 =
-         ViewModelUtils.ViewModelBuilder.CreateViewModel<IViewModel_Private>();
-
-      /// <summary>
-      /// The shared view model1
-      /// </summary>
-      private static readonly ICustomViewModelBase _sharedViewModel1 =
-         ViewModelUtils.ViewModelBuilder.CreateSharedViewModel<IViewModel_ToBeShared>(_generalPage1);
-
-      /// <summary>
-      /// The shared view model2
-      /// </summary>
-      private static readonly ICustomViewModelBase _sharedViewModel2 =
-         ViewModelUtils.ViewModelBuilder.CreateSharedViewModel<IViewModel_ToBeShared>(_generalPage2);
-
-      #endregion Private Fields
-
-      #region Public Methods
-
-      /// <summary>
-      /// Goes to next mode.
+      ///    Goes to next mode.
       /// </summary>
       public static void GoToNextMode()
       {
@@ -236,13 +203,26 @@ namespace Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation
       }
 
       /// <summary>
-      /// Resets the current page mode.
+      ///    Resets the current page mode.
       /// </summary>
       public static void ResetCurrentPageMode()
       {
          CurrentPageMode = 0;
       }
 
-      #endregion Public Methods
+      /// <summary>
+      ///    Sets the main page.
+      /// </summary>
+      /// <param name="page">The page.</param>
+      /// <param name="viewModel">The view model.</param>
+      private static void SetMainPage
+      (
+         ContentPage             page,
+         IViewModelWithLifecycle viewModel
+      )
+      {
+         page.BindingContext          = viewModel;
+         Application.Current.MainPage = page;
+      }
    }
 }

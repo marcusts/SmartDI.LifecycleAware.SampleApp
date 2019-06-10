@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI.LifecycleAware.SampleApp
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 12-27-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="ViewModelUtils.cs" company="Com.MarcusTS.SmartDI.LifecycleAware.SampleApp">
-//     Copyright (c) . All rights reserved.
+// <copyright file=ViewModelUtils.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -28,24 +23,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 // *********************************************************************************
+
 namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels
 {
-   using SmartDI;
+   using Com.MarcusTS.SmartDI;
 
    /// <summary>
-   /// Class ViewModelUtils.
+   ///    Class ViewModelUtils.
    /// </summary>
    public static class ViewModelUtils
    {
-      #region Public Fields
-
       // Get the view model factory out of the main container; the services are provided at the same time.
       /// <summary>
-      /// The view model builder
+      ///    The view model builder
       /// </summary>
       public static readonly IViewModelFactory ViewModelBuilder =
          App.GlobalServiceContainer.Resolve<IViewModelFactory>();
-
-      #endregion Public Fields
    }
 }

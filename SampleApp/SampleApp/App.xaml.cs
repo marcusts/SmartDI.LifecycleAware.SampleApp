@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI.LifecycleAware.SampleApp
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 12-26-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="App.xaml.cs" company="Com.MarcusTS.SmartDI.LifecycleAware.SampleApp">
-//     Copyright (c) . All rights reserved.
+// <copyright file=App.xaml.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -28,42 +23,37 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 // *********************************************************************************
+
 namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp
 {
+   using Com.MarcusTS.LifecycleAware.Common.Interfaces;
+   using Com.MarcusTS.SharedUtils.Utils;
+   using Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services;
+   using Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels;
+   using Com.MarcusTS.SmartDI;
+   using Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation;
    using System;
-   using Common.Services;
-   using MarcusTS.LifecycleAware.Common.Interfaces;
-   using SharedUtils.Utils;
-   using SmartDI;
-   using SmartDI.LifecycleAware.SampleApp.Common.Navigation;
-   using ViewModels;
    using Xamarin.Forms;
 
    /// <summary>
-   /// Class App.
-   /// Implements the <see cref="Xamarin.Forms.Application" />
-   /// Implements the <see cref="Com.MarcusTS.LifecycleAware.Common.Interfaces.IManagePageChanges" />
-   /// Implements the <see cref="Com.MarcusTS.LifecycleAware.Common.Interfaces.IReportAppLifecycle" />
+   ///    Class App.
+   ///    Implements the <see cref="Xamarin.Forms.Application" />
+   ///    Implements the <see cref="Com.MarcusTS.LifecycleAware.Common.Interfaces.IManagePageChanges" />
+   ///    Implements the <see cref="Com.MarcusTS.LifecycleAware.Common.Interfaces.IReportAppLifecycle" />
    /// </summary>
    /// <seealso cref="Xamarin.Forms.Application" />
    /// <seealso cref="Com.MarcusTS.LifecycleAware.Common.Interfaces.IManagePageChanges" />
    /// <seealso cref="Com.MarcusTS.LifecycleAware.Common.Interfaces.IReportAppLifecycle" />
    public partial class App : Application, IManagePageChanges, IReportAppLifecycle
    {
-      #region Public Fields
-
       // Using the standard version because this only contains global service singletons
       /// <summary>
-      /// The global service container
+      ///    The global service container
       /// </summary>
       public static readonly ISmartDIContainer GlobalServiceContainer = new SmartDIContainer();
 
-      #endregion Public Fields
-
-      #region Public Constructors
-
       /// <summary>
-      /// Initializes a new instance of the <see cref="App" /> class.
+      ///    Initializes a new instance of the <see cref="App" /> class.
       /// </summary>
       public App()
       {
@@ -83,12 +73,8 @@ namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp
          StateMachine.ResetCurrentPageMode();
       }
 
-      #endregion Public Constructors
-
-      #region Public Methods
-
       /// <summary>
-      /// Sets the main page.
+      ///    Sets the main page.
       /// </summary>
       /// <param name="newPage">The new page.</param>
       public void SetMainPage(Page newPage)
@@ -103,31 +89,23 @@ namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp
          }
       }
 
-      #endregion Public Methods
-
-      #region Public Events
-
       /// <summary>
-      /// Occurs when [application is going to sleep].
+      ///    Occurs when [application is going to sleep].
       /// </summary>
       public event EventUtils.NoParamsDelegate AppIsGoingToSleep;
 
       /// <summary>
-      /// Occurs when [application is resuming].
+      ///    Occurs when [application is resuming].
       /// </summary>
       public event EventUtils.NoParamsDelegate AppIsResuming;
 
       /// <summary>
-      /// Occurs when [application is starting].
+      ///    Occurs when [application is starting].
       /// </summary>
       public event EventUtils.NoParamsDelegate AppIsStarting;
 
-      #endregion Public Events
-
-      #region Protected Methods
-
       /// <summary>
-      /// Application developers override this method to perform actions when the application resumes from a sleeping state.
+      ///    Application developers override this method to perform actions when the application resumes from a sleeping state.
       /// </summary>
       /// <remarks>To be added.</remarks>
       protected override void OnResume()
@@ -136,7 +114,7 @@ namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp
       }
 
       /// <summary>
-      /// Application developers override this method to perform actions when the application enters the sleeping state.
+      ///    Application developers override this method to perform actions when the application enters the sleeping state.
       /// </summary>
       /// <remarks>To be added.</remarks>
       protected override void OnSleep()
@@ -145,13 +123,11 @@ namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp
       }
 
       /// <summary>
-      /// Called when [start].
+      ///    Called when [start].
       /// </summary>
       protected override void OnStart()
       {
          AppIsStarting?.Invoke();
       }
-
-      #endregion Protected Methods
    }
 }

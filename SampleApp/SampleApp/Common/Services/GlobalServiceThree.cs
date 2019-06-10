@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI.LifecycleAware.SampleApp
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 12-26-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="GlobalServiceThree.cs" company="Com.MarcusTS.SmartDI.LifecycleAware.SampleApp">
-//     Copyright (c) . All rights reserved.
+// <copyright file=GlobalServiceThree.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -28,19 +23,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 // *********************************************************************************
+
 namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services
 {
    /// <summary>
-   /// Interface IGlobalServiceThree
+   ///    Interface IGlobalServiceThree
    /// </summary>
    public interface IGlobalServiceThree
-   { }
+   {
+   }
 
    /// <summary>
-   /// Class GlobalServiceThree.
-   /// Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceThree" />
+   ///    Class GlobalServiceThree.
+   ///    Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceThree" />
    /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceThree" />
    public class GlobalServiceThree : IGlobalServiceThree
-   { }
+   {
+   }
 }

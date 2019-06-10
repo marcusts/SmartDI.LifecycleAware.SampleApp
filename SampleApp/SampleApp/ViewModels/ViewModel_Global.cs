@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI.LifecycleAware.SampleApp
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 12-27-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="ViewModel_Global.cs" company="Com.MarcusTS.SmartDI.LifecycleAware.SampleApp">
-//     Copyright (c) . All rights reserved.
+// <copyright file=ViewModel_Global.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -28,38 +23,40 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 // *********************************************************************************
+
 namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels
 {
-   using Common.Services;
+   using Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services;
 
    /// <summary>
-   /// Interface IViewModel_Global
-   /// Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
+   ///    Interface IViewModel_Global
+   ///    Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
    /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
    public interface IViewModel_Global : ICustomViewModelBase
-   { }
+   {
+   }
 
    /// <summary>
-   /// Class ViewModel_Global.
-   /// Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase" />
-   /// Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_Global" />
+   ///    Class ViewModel_Global.
+   ///    Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase" />
+   ///    Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_Global" />
    /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase" />
    /// <seealso cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_Global" />
    public class ViewModel_Global : CustomViewModelBase, IViewModel_Global
    {
-      #region Public Constructors
-
       /// <summary>
-      /// Initializes a new instance of the <see cref="ViewModel_Global" /> class.
+      ///    Initializes a new instance of the <see cref="ViewModel_Global" /> class.
       /// </summary>
       /// <param name="service2">The service2.</param>
       /// <param name="service3">The service3.</param>
-      public ViewModel_Global(IGlobalServiceTwo   service2,
-                              IGlobalServiceThree service3)
-      { }
-
-      #endregion Public Constructors
+      public ViewModel_Global
+      (
+         IGlobalServiceTwo   service2,
+         IGlobalServiceThree service3
+      )
+      {
+      }
    }
 }

@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI.LifecycleAware.SampleApp
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 12-26-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="ViewModelFactory.cs" company="Com.MarcusTS.SmartDI.LifecycleAware.SampleApp">
-//     Copyright (c) . All rights reserved.
+// <copyright file=ViewModelFactory.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -28,64 +23,60 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 // *********************************************************************************
+
 namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels
 {
-   using Common.Services;
-   using SmartDI;
-   using SmartDI.LifecycleAware;
+   using Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services;
+   using Com.MarcusTS.SmartDI;
+   using Com.MarcusTS.SmartDI.LifecycleAware;
 
    /// <summary>
-   /// Interface IViewModelFactory
+   ///    Interface IViewModelFactory
    /// </summary>
    public interface IViewModelFactory
    {
-      #region Public Methods
-
       /// <summary>
-      /// Creates the shared view model.
+      ///    Creates the shared view model.
       /// </summary>
       /// <typeparam name="T"></typeparam>
       /// <param name="obj">The object.</param>
       /// <returns>ICustomViewModelBase.</returns>
-      ICustomViewModelBase CreateSharedViewModel<T>(object obj) where T : class, ICustomViewModelBase;
+      ICustomViewModelBase CreateSharedViewModel<T>(object obj)
+         where T : class, ICustomViewModelBase;
 
       /// <summary>
-      /// Creates the view model.
+      ///    Creates the view model.
       /// </summary>
       /// <typeparam name="T"></typeparam>
       /// <returns>ICustomViewModelBase.</returns>
-      ICustomViewModelBase CreateViewModel<T>() where T : class, ICustomViewModelBase;
-
-      #endregion Public Methods
+      ICustomViewModelBase CreateViewModel<T>()
+         where T : class, ICustomViewModelBase;
    }
 
    /// <summary>
-   /// Class ViewModelFactory.
-   /// Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelFactory" />
+   ///    Class ViewModelFactory.
+   ///    Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelFactory" />
    /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelFactory" />
    public class ViewModelFactory : IViewModelFactory
    {
-      #region Private Fields
-
       /// <summary>
-      /// The view model container
+      ///    The view model container
       /// </summary>
       private readonly SmartDIContainerWithLifecycle _viewModelContainer = new SmartDIContainerWithLifecycle();
 
-      #endregion Private Fields
-
-      #region Public Constructors
-
       /// <summary>
-      /// Initializes a new instance of the <see cref="ViewModelFactory" /> class.
+      ///    Initializes a new instance of the <see cref="ViewModelFactory" /> class.
       /// </summary>
       /// <param name="service1">The service1.</param>
       /// <param name="service2">The service2.</param>
       /// <param name="service3">The service3.</param>
-      public ViewModelFactory(IGlobalServiceOne   service1,
-                              IGlobalServiceTwo   service2,
-                              IGlobalServiceThree service3)
+      public ViewModelFactory
+      (
+         IGlobalServiceOne   service1,
+         IGlobalServiceTwo   service2,
+         IGlobalServiceThree service3
+      )
       {
          // Perform registrations at the constructor, privately.
 
@@ -102,38 +93,34 @@ namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels
                                                                         StorageRules.DoNotStore);
          _viewModelContainer.RegisterTypeAsInterface<ViewModel_ToBeShared>(typeof(IViewModel_ToBeShared),
                                                                            StorageRules
-                                                                             .SharedDependencyBetweenInstances);
+                                                                              .SharedDependencyBetweenInstances);
          _viewModelContainer.RegisterTypeAsInterface<ViewModel_Global>(typeof(IViewModel_Global),
                                                                        StorageRules.GlobalSingleton);
       }
 
-      #endregion Public Constructors
-
-      #region Public Methods
-
       /// <summary>
-      /// This case requires an object "parent".
+      ///    This case requires an object "parent".
       /// </summary>
       /// <typeparam name="T"></typeparam>
       /// <param name="obj">The object.</param>
       /// <returns>ICustomViewModelBase.</returns>
-      public ICustomViewModelBase CreateSharedViewModel<T>(object obj) where T : class, ICustomViewModelBase
+      public ICustomViewModelBase CreateSharedViewModel<T>(object obj)
+         where T : class, ICustomViewModelBase
       {
          return _viewModelContainer.Resolve<T>(boundInstance: obj);
       }
 
       /// <summary>
-      /// This method will return the view model based on its registration rules.
-      /// It is safer than registering as "All Access" and then resolving using more narrow guidance.
-      /// It also encapsulates the private (static) view model container, insulating it from the rest of the app.
+      ///    This method will return the view model based on its registration rules.
+      ///    It is safer than registering as "All Access" and then resolving using more narrow guidance.
+      ///    It also encapsulates the private (static) view model container, insulating it from the rest of the app.
       /// </summary>
       /// <typeparam name="T"></typeparam>
       /// <returns>ICustomViewModelBase.</returns>
-      public ICustomViewModelBase CreateViewModel<T>() where T : class, ICustomViewModelBase
+      public ICustomViewModelBase CreateViewModel<T>()
+         where T : class, ICustomViewModelBase
       {
          return _viewModelContainer.Resolve<T>();
       }
-
-      #endregion Public Methods
    }
 }

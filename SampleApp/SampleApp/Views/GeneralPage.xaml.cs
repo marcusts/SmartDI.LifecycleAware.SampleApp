@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI.LifecycleAware.SampleApp
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 12-27-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="GeneralPage.xaml.cs" company="Com.MarcusTS.SmartDI.LifecycleAware.SampleApp">
-//     Copyright (c) . All rights reserved.
+// <copyright file=GeneralPage.xaml.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -28,25 +23,22 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 // *********************************************************************************
+
 namespace Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Views
 {
    /// <summary>
-   /// Class GeneralPage.
-   /// Implements the <see cref="Com.MarcusTS.LifecycleAware.Views.Pages.ContentPageWithLifecycle" />
+   ///    Class GeneralPage.
+   ///    Implements the <see cref="Com.MarcusTS.LifecycleAware.Views.Pages.ContentPageWithLifecycle" />
    /// </summary>
    /// <seealso cref="Com.MarcusTS.LifecycleAware.Views.Pages.ContentPageWithLifecycle" />
    public partial class GeneralPage
    {
-      #region Public Constructors
-
       /// <summary>
-      /// Initializes a new instance of the <see cref="GeneralPage" /> class.
+      ///    Initializes a new instance of the <see cref="GeneralPage" /> class.
       /// </summary>
       public GeneralPage()
       {
          InitializeComponent();
       }
-
-      #endregion Public Constructors
    }
 }

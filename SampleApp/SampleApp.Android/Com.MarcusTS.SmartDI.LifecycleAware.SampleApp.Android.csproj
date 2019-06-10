@@ -52,14 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="26.1.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="26.1.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="26.1.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="26.1.0.1" />
-    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="26.1.0.1" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,6 +91,11 @@
       <Project>{4A187DB5-5F93-4630-AD17-4CCBF86E1D81}</Project>
       <Name>Com.MarcusTS.SmartDI.LifecycleAware.SampleApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.6.0.220655</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

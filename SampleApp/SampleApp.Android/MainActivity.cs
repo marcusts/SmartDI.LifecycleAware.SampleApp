@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : SampleApp.Android
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 12-26-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="MainActivity.cs" company="">
-//     Copyright ©  2014
+// <copyright file=MainActivity.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -28,6 +23,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 // *********************************************************************************
+
 namespace SampleApp.Droid
 {
    using Android.App;
@@ -38,18 +34,16 @@ namespace SampleApp.Droid
    using Xamarin.Forms.Platform.Android;
 
    /// <summary>
-   /// Class MainActivity.
-   /// Implements the <see cref="Xamarin.Forms.Platform.Android.FormsAppCompatActivity" />
+   ///    Class MainActivity.
+   ///    Implements the <see cref="Xamarin.Forms.Platform.Android.FormsAppCompatActivity" />
    /// </summary>
    /// <seealso cref="Xamarin.Forms.Platform.Android.FormsAppCompatActivity" />
    [Activity(Label         = "SampleApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true,
       ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
    public class MainActivity : FormsAppCompatActivity
    {
-      #region Protected Methods
-
       /// <summary>
-      /// Called when [create].
+      ///    Called when [create].
       /// </summary>
       /// <param name="savedInstanceState">State of the saved instance.</param>
       protected override void OnCreate(Bundle savedInstanceState)
@@ -61,7 +55,5 @@ namespace SampleApp.Droid
          Forms.Init(this, savedInstanceState);
          LoadApplication(new App());
       }
-
-      #endregion Protected Methods
    }
 }

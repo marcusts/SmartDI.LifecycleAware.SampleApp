@@ -1,11 +1,6 @@
 ﻿// *********************************************************************************
-// Assembly         : Com.MarcusTS.SmartDI.LifecycleAware.SampleApp
-// Author           : Stephen Marcus (Marcus Technical Services, Inc.)
-// Created          : 12-27-2018
-// Last Modified On : 12-27-2018
-//
-// <copyright file="ViewModel_ToBeShared.cs" company="Com.MarcusTS.SmartDI.LifecycleAware.SampleApp">
-//     Copyright (c) . All rights reserved.
+// <copyright file=ViewModel_ToBeShared.cs company="Marcus Technical Services, Inc.">
+//     Copyright @2019 Marcus Technical Services, Inc.
 // </copyright>
 //
 // MIT License
@@ -28,36 +23,35 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 // *********************************************************************************
+
 namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels
 {
-   using Common.Services;
+   using Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services;
 
    /// <summary>
-   /// Interface IViewModel_ToBeShared
-   /// Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
+   ///    Interface IViewModel_ToBeShared
+   ///    Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
    /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
    public interface IViewModel_ToBeShared : ICustomViewModelBase
-   { }
+   {
+   }
 
    /// <summary>
-   /// Class ViewModel_ToBeShared.
-   /// Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase" />
-   /// Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_ToBeShared" />
+   ///    Class ViewModel_ToBeShared.
+   ///    Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase" />
+   ///    Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_ToBeShared" />
    /// </summary>
    /// <seealso cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.CustomViewModelBase" />
    /// <seealso cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModel_ToBeShared" />
    public class ViewModel_ToBeShared : CustomViewModelBase, IViewModel_ToBeShared
    {
-      #region Public Constructors
-
       /// <summary>
-      /// Initializes a new instance of the <see cref="ViewModel_ToBeShared" /> class.
+      ///    Initializes a new instance of the <see cref="ViewModel_ToBeShared" /> class.
       /// </summary>
       /// <param name="service2">The service2.</param>
       public ViewModel_ToBeShared(IGlobalServiceTwo service2)
-      { }
-
-      #endregion Public Constructors
+      {
+      }
    }
 }
