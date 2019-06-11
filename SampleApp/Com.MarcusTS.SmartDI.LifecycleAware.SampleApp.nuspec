@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.nuspec</id>
+    <version>1.03</version>
+    <title>Smart DI Container with Lifecycle Sample App</title>
+    <authors>Stephen Marcus</authors>
+    <owners>Marcus Technical Services, Inc.</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+     <license type="file">license.txt</license>
+     <description>
+       A sample application demonstrating lifecycle support for a Smart DI Container.
+    </description>
+    <copyright>Copyright 2019 Marcus Technical Services, Inc. (https://www.marcusts.com)</copyright>
+     <releaseNotes>Initial check-in</releaseNotes>
+    <tags>ioc ioc-container di di-container object-lifecycle smart-di-container sample-app</tags>
+  </metadata>
+</package>

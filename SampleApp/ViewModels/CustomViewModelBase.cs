@@ -71,7 +71,6 @@ namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels
    /// </summary>
    /// <seealso cref="Com.MarcusTS.LifecycleAware.ViewModels.ViewModelWithLifecycle" />
    /// <seealso cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase" />
-   [AddINotifyPropertyChangedInterface]
    public class CustomViewModelBase : ViewModelWithLifecycle, ICustomViewModelBase
    {
       /// <summary>
