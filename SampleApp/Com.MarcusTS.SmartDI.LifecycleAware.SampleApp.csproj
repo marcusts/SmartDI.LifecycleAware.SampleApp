@@ -5,12 +5,14 @@
     <Authors>Stephen Marcus</Authors>
     <Company>Marcus Technical Services, Inc.</Company>
     <Product>Smart DI Container with Lifecycle Sample App</Product>
-    <Version>1.0.3</Version>
+    <Version>1.0.6</Version>
     <PackageTags>ioc ioc-container di di-container object-lifecycle smart-di-container sample-app</PackageTags>
     <PackageReleaseNotes>Removed direct project dependence</PackageReleaseNotes>
     <Copyright>Copyright 2018 Marcus Technical Services, Inc. (https://www.marcusts.com)</Copyright>
     <Description>A sample application demonstrating lifecycle support for a Smart DI Container.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.6.0</AssemblyVersion>
+    <FileVersion>1.0.6.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

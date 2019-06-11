@@ -28,8 +28,16 @@ namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp
 {
    using Xamarin.Forms;
 
+   /// <summary>
+   ///    Class MainPage.
+   ///    Implements the <see cref="Xamarin.Forms.ContentPage" />
+   /// </summary>
+   /// <seealso cref="Xamarin.Forms.ContentPage" />
    public partial class MainPage : ContentPage
    {
+      /// <summary>
+      ///    Initializes a new instance of the <see cref="MainPage" /> class.
+      /// </summary>
       public MainPage()
       {
          InitializeComponent();

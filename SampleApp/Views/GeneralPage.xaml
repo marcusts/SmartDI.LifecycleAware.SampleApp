@@ -4,13 +4,13 @@
    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
    xmlns:pages="clr-namespace:Com.MarcusTS.LifecycleAware.Views.Pages;assembly=Com.MarcusTS.LifecycleAware"
    x:Class="Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Views.GeneralPage">
-   <pages:ContentPageWithLifecycle.Content>
-      <StackLayout
+<pages:ContentPageWithLifecycle.Content>
+   <StackLayout
            VerticalOptions="CenterAndExpand"
            HorizontalOptions="CenterAndExpand"
            Margin="50"
            Spacing="25">
-         <Label
+      <Label
               Text="{Binding Title}"
               FontSize="32"
               FontAttributes="Bold"
@@ -18,7 +18,7 @@
               HorizontalOptions="Center"
               VerticalTextAlignment="Center"
               HorizontalTextAlignment="Center" />
-         <Label
+      <Label
               Text="{Binding Description}"
               FontSize="18"
               FontAttributes="Italic"
@@ -26,7 +26,7 @@
               HorizontalOptions="Center"
               VerticalTextAlignment="Center"
               HorizontalTextAlignment="Center" />
-         <Label
+      <Label
               Text="{Binding Content}"
               FontSize="32"
               TextColor="DarkGreen"
@@ -35,7 +35,7 @@
               HorizontalOptions="Center"
               VerticalTextAlignment="Center"
               HorizontalTextAlignment="Center" />
-         <Button
+      <Button
               Command="{Binding ButtonCommand}"
               BackgroundColor="DarkBlue"
               WidthRequest="100"
@@ -46,6 +46,6 @@
               FontAttributes="Bold"
               VerticalOptions="Center"
               HorizontalOptions="Center" />
-      </StackLayout>
-   </pages:ContentPageWithLifecycle.Content>
+   </StackLayout>
+</pages:ContentPageWithLifecycle.Content>
 </pages:ContentPageWithLifecycle>

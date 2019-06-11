@@ -35,19 +35,55 @@ namespace Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation
    /// <summary>
    ///    Class StateMachine.
    /// </summary>
+   /// <summary>
+   ///    Class StateMachine.
+   /// </summary>
    public static class StateMachine
    {
+      /// <summary>
+      ///    Enum PageModes
+      /// </summary>
       public enum PageModes
       {
+         /// <summary>
+         ///    The private 1
+         /// </summary>
          Private_1,
+
+         /// <summary>
+         ///    The private 2
+         /// </summary>
          Private_2,
+
+         /// <summary>
+         ///    The shared 1
+         /// </summary>
          Shared_1,
+
+         /// <summary>
+         ///    The shared 2
+         /// </summary>
          Shared_2,
+
+         /// <summary>
+         ///    The global 1
+         /// </summary>
          Global_1,
+
+         /// <summary>
+         ///    The global 2
+         /// </summary>
          Global_2,
+
+         /// <summary>
+         ///    The end
+         /// </summary>
          END
       }
 
+      /// <summary>
+      ///    The end view model
+      /// </summary>
       /// <summary>
       ///    The end view model
       /// </summary>
@@ -57,13 +93,22 @@ namespace Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation
       /// <summary>
       ///    The general page1
       /// </summary>
+      /// <summary>
+      ///    The general page1
+      /// </summary>
       private static readonly ContentPage _generalPage1 = new GeneralPage();
 
       /// <summary>
       ///    The general page2
       /// </summary>
+      /// <summary>
+      ///    The general page2
+      /// </summary>
       private static readonly ContentPage _generalPage2 = new GeneralPage();
 
+      /// <summary>
+      ///    The global view model1
+      /// </summary>
       /// <summary>
       ///    The global view model1
       /// </summary>
@@ -73,9 +118,15 @@ namespace Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation
       /// <summary>
       ///    The global view model2
       /// </summary>
+      /// <summary>
+      ///    The global view model2
+      /// </summary>
       private static readonly ICustomViewModelBase _globalViewModel2 =
          ViewModelUtils.ViewModelBuilder.CreateViewModel<IViewModel_Global>();
 
+      /// <summary>
+      ///    The private view model1
+      /// </summary>
       /// <summary>
       ///    The private view model1
       /// </summary>
@@ -85,15 +136,24 @@ namespace Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation
       /// <summary>
       ///    The private view model2
       /// </summary>
+      /// <summary>
+      ///    The private view model2
+      /// </summary>
       private static readonly ICustomViewModelBase _privateViewModel2 =
          ViewModelUtils.ViewModelBuilder.CreateViewModel<IViewModel_Private>();
 
       /// <summary>
       ///    The shared view model1
       /// </summary>
+      /// <summary>
+      ///    The shared view model1
+      /// </summary>
       private static readonly ICustomViewModelBase _sharedViewModel1 =
          ViewModelUtils.ViewModelBuilder.CreateSharedViewModel<IViewModel_ToBeShared>(_generalPage1);
 
+      /// <summary>
+      ///    The shared view model2
+      /// </summary>
       /// <summary>
       ///    The shared view model2
       /// </summary>

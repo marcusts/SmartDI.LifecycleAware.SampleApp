@@ -26,10 +26,18 @@
 
 namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels
 {
+   /// <summary>
+   ///    Interface IViewModelBase
+   /// </summary>
    public interface IViewModelBase
    {
    }
 
+   /// <summary>
+   ///    Class ViewModelBase.
+   ///    Implements the <see cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelBase" />
+   /// </summary>
+   /// <seealso cref="Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelBase" />
    public class ViewModelBase : IViewModelBase
    {
    }

@@ -28,7 +28,6 @@ namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels
 {
    using Com.MarcusTS.LifecycleAware.ViewModels;
    using Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation;
-   using PropertyChanged;
    using System.Windows.Input;
    using Xamarin.Forms;
 
