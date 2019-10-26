@@ -99,6 +99,18 @@
             </summary>
             <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services.IGlobalServiceTwo" />
         </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.MainPage">
+            <summary>
+               Class MainPage.
+               Implements the <see cref="T:Xamarin.Forms.ContentPage" />
+            </summary>
+            <seealso cref="T:Xamarin.Forms.ContentPage" />
+        </member>
+        <member name="M:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.MainPage.#ctor">
+            <summary>
+               Initializes a new instance of the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.MainPage" /> class.
+            </summary>
+        </member>
         <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ICustomViewModelBase">
             <summary>
                Interface ICustomViewModelBase
@@ -162,6 +174,18 @@
                Gets or sets the title.
             </summary>
             <value>The title.</value>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelBase">
+            <summary>
+               Interface IViewModelBase
+            </summary>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.ViewModelBase">
+            <summary>
+               Class ViewModelBase.
+               Implements the <see cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelBase" />
+            </summary>
+            <seealso cref="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelBase" />
         </member>
         <member name="T:Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels.IViewModelFactory">
             <summary>
@@ -302,8 +326,54 @@
             <summary>
                Class StateMachine.
             </summary>
+            <summary>
+               Class StateMachine.
+            </summary>
+        </member>
+        <member name="T:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.PageModes">
+            <summary>
+               Enum PageModes
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.PageModes.Private_1">
+            <summary>
+               The private 1
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.PageModes.Private_2">
+            <summary>
+               The private 2
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.PageModes.Shared_1">
+            <summary>
+               The shared 1
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.PageModes.Shared_2">
+            <summary>
+               The shared 2
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.PageModes.Global_1">
+            <summary>
+               The global 1
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.PageModes.Global_2">
+            <summary>
+               The global 2
+            </summary>
+        </member>
+        <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine.PageModes.END">
+            <summary>
+               The end
+            </summary>
         </member>
         <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._endViewModel">
+            <summary>
+               The end view model
+            </summary>
             <summary>
                The end view model
             </summary>
@@ -312,8 +382,14 @@
             <summary>
                The general page1
             </summary>
+            <summary>
+               The general page1
+            </summary>
         </member>
         <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._generalPage2">
+            <summary>
+               The general page2
+            </summary>
             <summary>
                The general page2
             </summary>
@@ -322,8 +398,14 @@
             <summary>
                The global view model1
             </summary>
+            <summary>
+               The global view model1
+            </summary>
         </member>
         <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._globalViewModel2">
+            <summary>
+               The global view model2
+            </summary>
             <summary>
                The global view model2
             </summary>
@@ -332,8 +414,14 @@
             <summary>
                The private view model1
             </summary>
+            <summary>
+               The private view model1
+            </summary>
         </member>
         <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._privateViewModel2">
+            <summary>
+               The private view model2
+            </summary>
             <summary>
                The private view model2
             </summary>
@@ -342,8 +430,14 @@
             <summary>
                The shared view model1
             </summary>
+            <summary>
+               The shared view model1
+            </summary>
         </member>
         <member name="F:Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.Common.Navigation.StateMachine._sharedViewModel2">
+            <summary>
+               The shared view model2
+            </summary>
             <summary>
                The shared view model2
             </summary>
