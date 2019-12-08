@@ -26,9 +26,9 @@
 
 namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels
 {
-   using Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.Common.Services;
-   using Com.MarcusTS.SmartDI;
-   using Com.MarcusTS.SmartDI.LifecycleAware;
+   using SmartDI;
+   using Common.Services;
+   using SmartDI.LifecycleAware;
 
    /// <summary>
    ///    Interface IViewModelFactory
@@ -73,8 +73,8 @@ namespace Com.MarcusTS.SmartDi.LifecycleAware.SampleApp.ViewModels
       /// <param name="service3">The service3.</param>
       public ViewModelFactory
       (
-         IGlobalServiceOne   service1,
-         IGlobalServiceTwo   service2,
+         IGlobalServiceOne service1,
+         IGlobalServiceTwo service2,
          IGlobalServiceThree service3
       )
       {

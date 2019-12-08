@@ -5,14 +5,14 @@
     <Authors>Stephen Marcus</Authors>
     <Company>Marcus Technical Services, Inc.</Company>
     <Product>Smart DI Container with Lifecycle Sample App</Product>
-    <Version>1.0.7</Version>
+    <Version>1.0.8</Version>
     <PackageTags>ioc ioc-container di di-container object-lifecycle smart-di-container sample-app</PackageTags>
     <PackageReleaseNotes>Removed direct project dependence</PackageReleaseNotes>
     <Copyright>Copyright 2018 Marcus Technical Services, Inc. (https://www.marcusts.com)</Copyright>
     <Description>A sample application demonstrating lifecycle support for a Smart DI Container.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.7.0</AssemblyVersion>
-    <FileVersion>1.0.7.0</FileVersion>
+    <AssemblyVersion>1.0.8.0</AssemblyVersion>
+    <FileVersion>1.0.8.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -23,11 +23,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Com.MarcusTS.SharedForms" Version="1.0.14" />
+    <PackageReference Include="Com.MarcusTS.LifecycleAware" Version="1.0.15" />
+    <PackageReference Include="Com.MarcusTS.SharedForms" Version="1.0.17" />
     <PackageReference Include="Com.MarcusTS.SharedUtils" Version="1.0.12" />
     <PackageReference Include="Com.MarcusTS.SmartDI" Version="1.0.16" />
-    <PackageReference Include="Com.MarcusTS.SmartDI.LifecycleAware" Version="1.0.5" />
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991221" />
   </ItemGroup>
 
   <ItemGroup>

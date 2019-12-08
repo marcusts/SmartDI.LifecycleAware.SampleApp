@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Com.MarcusTS.SmartDI.LifecycleAware.SampleApp.nuspec</id>
-    <version>1.07</version>
+    <version>1.08</version>
     <title>Smart DI Container with Lifecycle Sample App</title>
     <authors>Stephen Marcus</authors>
     <owners>Marcus Technical Services, Inc.</owners>
